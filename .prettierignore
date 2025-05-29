@@ -1,0 +1,41 @@
+# Dependências
+node_modules/
+
+# Build output
+/dist/
+/tmp/
+/out-tsc/
+
+# Runtime data
+pids
+*.pid
+*.seed
+*.pid.lock
+
+# Logs
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+lerna-debug.log*
+
+# Coverage directory usado por ferramentas como nyc
+coverage/
+
+# Arquivos do sistema
+.DS_Store
+Thumbs.db
+
+# IDEs
+/.vscode/
+/.idea/
+
+# Arquivos gerados
+*.tgz
+*.tar.gz
+
+# Angular
+/.angular/cache
+
+# Outros
+package-lock.json
+yarn.lock

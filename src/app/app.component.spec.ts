@@ -8,22 +8,22 @@ describe('AppComponent', () => {
     }).compileComponents();
   });
 
-  it('should create the app', () => {
+  it('deve criar o app', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
     expect(app).toBeTruthy();
   });
 
-  it(`should have the 'ticou' title`, () => {
+  it('deve ter o titulo "Ticou"', () => {
     const fixture = TestBed.createComponent(AppComponent);
     const app = fixture.componentInstance;
-    expect(app.title).toEqual('ticou');
+    expect(app.titulo).toEqual('Ticou');
   });
 
-  it('should render title', () => {
+  it('deve renderizar o titulo', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement as HTMLElement;
-    expect(compiled.querySelector('h1')?.textContent).toContain('Hello, ticou');
+    expect(compiled.querySelector('h1')?.textContent).toContain('Ticou');
   });
 });
