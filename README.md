@@ -11,6 +11,7 @@
 - **ESLint** para linting
 - **TypeScript** com configuração strict
 - **Angular Material** (pronto para uso)
+- **JSON Server** para API mock durante desenvolvimento
 
 ## 📁 Estrutura do Projeto
 
@@ -34,6 +35,11 @@ npm start                 # Inicia o servidor de desenvolvimento
 npm run build            # Build para produção
 npm run build:prod       # Build otimizado para produção
 
+# API Mock (JSON Server)
+npm run api              # Inicia apenas a API mock na porta 3000
+npm run dev              # Inicia Angular + API simultaneamente
+npm run api:routes       # API com rotas customizadas
+
 # Testes
 npm test                  # Executa testes com Jest
 npm run test:watch       # Executa testes em modo watch
@@ -49,22 +55,26 @@ npm run format:check     # Verifica formatação sem alterar
 ## 🏗️ Configurações
 
 ### TypeScript
+
 - **Strict mode** habilitado
 - **Path mapping** configurado (`@core/*`, `@shared/*`, etc.)
 - Configuração otimizada para Angular
 
 ### Jest
+
 - Substitui Jasmine/Karma
 - Configuração para Angular com `jest-preset-angular`
 - Coverage reports em HTML, LCOV e texto
 - Suporte a path mapping
 
 ### Prettier
+
 - Plugin do Tailwind CSS para ordenação de classes
 - Configuração consistente para TypeScript, HTML e CSS
 - Integração com Angular templates
 
 ### ESLint
+
 - Regras do Angular ESLint
 - Configuração para Clean Code
 - Suporte a TypeScript
@@ -80,17 +90,20 @@ npm run format:check     # Verifica formatação sem alterar
 ## 🚦 Como Começar
 
 1. **Clone o repositório**
+
    ```bash
    git clone <url-do-repositorio>
    cd ticou
    ```
 
 2. **Instale as dependências**
+
    ```bash
    npm install
    ```
 
 3. **Execute o projeto**
+
    ```bash
    npm start
    ```
@@ -111,14 +124,18 @@ npm run format:check     # Verifica formatação sem alterar
 ## 🔧 Configuração de Desenvolvimento
 
 ### VS Code (Recomendado)
+
 Instale as extensões:
+
 - Angular Language Service
 - Prettier - Code formatter
 - ESLint
 - Tailwind CSS IntelliSense
 
 ### Configuração do Editor
+
 O projeto inclui configurações para:
+
 - `.editorconfig` - Configurações básicas do editor
 - `.prettierrc` - Formatação automática
 - `.eslintrc.json` - Regras de linting
@@ -126,24 +143,62 @@ O projeto inclui configurações para:
 ## 🎨 Tailwind CSS
 
 O Tailwind está configurado com:
+
 - **Forms plugin** para estilização de formulários
 - **Typography plugin** para conteúdo textual
 - **Configuração customizada** no `tailwind.config.js`
 
+## 📡 API Mock (JSON Server)
+
+O projeto inclui **JSON Server** configurado para desenvolvimento sem backend:
+
+### Recursos Disponíveis
+
+- 📋 **Dados de exemplo**: Usuários, tarefas, configurações e categorias
+- 🔧 **Serviço Angular**: `ApiService` completo e tipado
+- 🌐 **Interface web**: `http://localhost:3000` para visualizar dados
+- 🎯 **Rotas customizadas**: Endpoints mais amigáveis via `routes.json`
+
+### Como Usar
+
+```bash
+# Apenas a API (porta 3000)
+npm run api
+
+# Angular + API simultaneamente (recomendado)
+npm run dev
+
+# Com rotas customizadas
+npm run api:routes
+```
+
+### Endpoints Principais
+
+- `GET /usuarios` - Lista usuários
+- `GET /tarefas` - Lista tarefas
+- `GET /tarefas?usuarioId=1` - Tarefas de um usuário
+- `POST /usuarios` - Criar usuário
+- `PATCH /usuarios/1` - Atualizar usuário
+
+📖 **Documentação completa**: Veja `JSON_SERVER.md` para detalhes e exemplos
+
 ## 📦 Build e Deploy
 
 ### Build de Produção
+
 ```bash
 npm run build:prod
 ```
 
 ### Configurações de Ambiente
+
 - `environment.ts` - Desenvolvimento
 - `environment.prod.ts` - Produção
 
 ## 🧪 Testes
 
 O projeto usa Jest com configuração otimizada para Angular:
+
 - **Setup automático** do ambiente de testes
 - **Coverage reports** detalhados
 - **Mocking** facilitado para serviços

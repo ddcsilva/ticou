@@ -65,15 +65,17 @@ npm start             # Desenvolvimento
 - ✅ **Prettier** com plugin Tailwind
 - ✅ **TypeScript strict** com path mapping
 - ✅ **Angular Material** pronto para uso
+- ✅ **JSON Server** para API mock
 - ✅ **VS Code** configurado com extensões recomendadas
 
 ## 🎯 Próximos Passos
 
 1. **Remover este arquivo** (`TEMPLATE.md`) após configurar
 2. **Implementar suas funcionalidades** específicas
-3. **Adicionar PWA** se necessário (`ng add @angular/pwa`)
-4. **Configurar CI/CD** para seu ambiente
-5. **Personalizar o README.md** com informações do seu projeto
+3. **Testar a API mock** (`npm run dev` para Angular + API)
+4. **Adicionar PWA** se necessário (`ng add @angular/pwa`)
+5. **Configurar CI/CD** para seu ambiente
+6. **Personalizar o README.md** com informações do seu projeto
 
 ## 🔧 Scripts Disponíveis
 
@@ -84,6 +86,22 @@ npm run build        # Build de produção
 npm run format       # Formatação de código
 npm run lint         # Verificação de código
 npm run lint:fix     # Correção automática de lint
+npm run api          # API mock (json-server)
+npm run dev          # Angular + API simultaneamente
+```
+
+## 📡 API Mock Incluída
+
+O template vem com **json-server** configurado para desenvolvimento sem backend:
+
+- 📋 **Dados prontos:** Usuários, tarefas, configurações e categorias
+- 🔧 **Serviço Angular:** `ApiService` completo e tipado
+- 🌐 **Interface web:** `http://localhost:3000` para visualizar dados
+- 📖 **Documentação:** Veja `JSON_SERVER.md` para detalhes completos
+
+```bash
+npm run dev          # Inicia Angular (4200) + API (3000)
+npm run api          # Apenas a API mock na porta 3000
 ```
 
 ## 💡 Dicas
@@ -91,6 +109,7 @@ npm run lint:fix     # Correção automática de lint
 - Use `ng generate` para criar novos componentes, serviços, etc.
 - Os path mappings estão configurados (`@core/*`, `@shared/*`, etc.)
 - O projeto está configurado para ser PWA-ready
+- API mock permite desenvolvimento frontend independente
 - Todas as configurações seguem boas práticas modernas
 
 ---

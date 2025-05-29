@@ -13,7 +13,10 @@
     "lint": "ng lint",
     "lint:fix": "ng lint --fix",
     "format": "prettier --write \"src/**/*.{ts,html,css,scss,json}\"",
-    "format:check": "prettier --check \"src/**/*.{ts,html,css,scss,json}\""
+    "format:check": "prettier --check \"src/**/*.{ts,html,css,scss,json}\"",
+    "api": "json-server --watch db.json --port 3000",
+    "dev": "concurrently \"npm run api\" \"npm start\"",
+    "api:routes": "json-server --watch db.json --port 3000 --routes routes.json"
   },
   "private": true,
   "dependencies": {
@@ -46,10 +49,12 @@
     "@typescript-eslint/eslint-plugin": "7.11.0",
     "@typescript-eslint/parser": "7.11.0",
     "autoprefixer": "^10.4.20",
+    "concurrently": "^9.1.2",
     "eslint": "8.57.0",
     "jest": "^29.7.0",
     "jest-environment-jsdom": "^29.7.0",
     "jest-preset-angular": "^14.4.0",
+    "json-server": "^1.0.0-beta.3",
     "postcss": "^8.5.3",
     "prettier": "^3.4.2",
     "prettier-plugin-tailwindcss": "^0.6.9",

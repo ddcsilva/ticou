@@ -1,0 +1,10 @@
+{
+  "/api/*": "/$1",
+  "/api/usuarios/:id/tarefas": "/tarefas?usuarioId=:id",
+  "/api/tarefas/usuario/:usuarioId": "/tarefas?usuarioId=:usuarioId",
+  "/api/tarefas/concluidas": "/tarefas?concluida=true",
+  "/api/tarefas/pendentes": "/tarefas?concluida=false",
+  "/api/tarefas/prioridade/:nivel": "/tarefas?prioridade=:nivel",
+  "/api/usuarios/ativos": "/usuarios?ativo=true",
+  "/api/usuarios/inativos": "/usuarios?ativo=false"
+}

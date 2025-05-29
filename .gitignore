@@ -63,3 +63,7 @@ pids
 *.pid
 *.seed
 *.pid.lock
+
+# JSON Server
+# db.json é mantido no versionamento para dados de exemplo
+# Se quiser ignorar: db.json
